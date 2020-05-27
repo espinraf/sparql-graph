@@ -1,0 +1,57 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'tech.miniswp.sparql'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+	implementation 'org.webjars:webjars-locator-core'
+	implementation 'org.webjars:sockjs-client:1.0.2'
+	implementation 'org.webjars:stomp-websocket:2.3.3'
+	implementation 'org.webjars:bootstrap:3.3.7'
+	implementation 'org.webjars:jquery:3.1.1-1'
+	compile group: 'org.json', name: 'json', version: '20090211'
+
+	implementation 'org.apache.jena:jena-core:3.10.0'
+	implementation 'org.apache.jena:jena-arq:3.10.0'
+	implementation 'org.apache.jena:jena-tdb:3.10.0'
+	implementation 'org.apache.jena:jena-iri:3.10.0'
+	implementation 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+
+	implementation 'org.eclipse.rdf4j:rdf4j-storage:3.1.0'
+	implementation 'org.eclipse.rdf4j:rdf4j-tools-federation:3.1.0'
+	implementation 'org.eclipse.rdf4j:rdf4j-repository-http'
+	// https://mvnrepository.com/artifact/com.ontotext.graphdb/graphdb-free-runtime
+	compile group: 'com.ontotext.graphdb', name: 'graphdb-free-runtime', version: '9.1.1'
+
+	compile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.9.2'
+	compile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.9.2', classifier: 'models'
+}
+
+test {
+	useJUnitPlatform()
+}

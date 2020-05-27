@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#"
+     xml:base="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:scaniaperson="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#accountsForCostCentre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#accountsForCostCentre">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#FinancialStatement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#hasCostCentre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#hasCostCentre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#hasMonthlySalary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#hasMonthlySalary">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#partOfDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#partOfDepartment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#partOfTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#partOfTeam">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#worksAtDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#worksAtDepartment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#salaryInSEK -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#salaryInSEK">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#FinancialStatement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#FinancialStatement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#EDI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#EDI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team"/>
+        <partOfDepartment rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Eva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Eva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+        <hasMonthlySalary rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#38000SEK"/>
+        <partOfTeam rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#EDI"/>
+        <worksAtDepartment rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Felicia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Felicia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+        <hasMonthlySalary rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#42000SEK"/>
+        <partOfTeam rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#SDIP"/>
+        <worksAtDepartment rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IoT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IoT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team"/>
+        <partOfDepartment rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#SDIP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#SDIP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Team"/>
+        <partOfDepartment rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Tugay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Tugay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#Employee"/>
+        <hasMonthlySalary rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#50000SEK"/>
+        <partOfTeam rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IoT"/>
+        <worksAtDepartment rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#financialStatement2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#financialStatement2019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#FinancialStatement"/>
+        <accountsForCostCentre rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCA"/>
+        <accountsForCostCentre rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#38000SEK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#38000SEK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+        <hasCostCentre rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+        <salaryInSEK rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38000</salaryInSEK>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#42000SEK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#42000SEK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+        <hasCostCentre rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCB"/>
+        <salaryInSEK rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42000</salaryInSEK>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#50000SEK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#50000SEK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#MonthlySalary"/>
+        <hasCostCentre rdf:resource="http://www.semanticweb.org/fwxda9/ontologies/2020/1/scaniaperson#IXCA"/>
+        <salaryInSEK rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</salaryInSEK>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
