@@ -4,6 +4,8 @@ import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.sparql.algebra.*;
 import org.apache.jena.sparql.algebra.op.*;
+import org.apache.jena.sparql.expr.Expr;
+import org.apache.jena.sparql.expr.ExprList;
 
 public class SparqlAlgebraAuth {
 
@@ -43,6 +45,7 @@ public class SparqlAlgebraAuth {
         System.out.println(op);
         OpWalker.walk(op, new AuthOpBGPVisitor());
         OpWalker.walk(op, new AuthOpProjectVisitor());
+        OpWalker.walk(op, new AuthOpFilterVisitor());
     }
 
     public static class AuthOpBGPVisitor extends OpVisitorBase {
@@ -50,6 +53,10 @@ public class SparqlAlgebraAuth {
         public void visit(OpBGP opBGP) {
             System.out.println("Visitor BGP: ");
             System.out.println(opBGP);
+            System.out.println(opBGP.getName());
+            System.out.println(opBGP.getPattern().get(0).getSubject());
+            System.out.println(opBGP.getPattern().get(0).getPredicate());
+            System.out.println(opBGP.getPattern().get(0).getObject().isVariable());
         }
     }
 
@@ -59,6 +66,18 @@ public class SparqlAlgebraAuth {
             System.out.println("Visitor Project: ");
             //System.out.println(opProject);
             System.out.println(opProject.getVars());
+        }
+    }
+
+    public static class AuthOpFilterVisitor extends OpVisitorBase {
+        @Override
+        public void visit(OpFilter opFilter) {
+            System.out.println("Visitor Filter: ");
+            //System.out.println(opProject);
+            for (Expr exp : opFilter.getExprs()) {
+                System.out.println("Exp: ");
+                System.out.println(exp);
+            }
         }
     }
 }
